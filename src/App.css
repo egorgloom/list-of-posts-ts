@@ -1,4 +1,154 @@
-.App {
-  text-align: center;
+body {
+  background: #0D042A;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ 
+
+}
+
+.App {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 1000px;
+  gap: 15px;
+
+}
+
+.createPost {
+  display: flex;
+  flex-direction: column;
+  row-gap: 35px;
+  z-index: 10;
+}
+.myInputSearch {
+  width: 100%;
+  padding: 5px 15px;
+  background: transparent;
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: white;
+  color: white;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 15px;
+  
+}
+
+.myInput {
+    width: 95%;
+    padding: 5px 15px;
+    background: transparent;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-color: white;
+    color: white;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
+    
+}
+
+.myInput::placeholder {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.myInput:focus::placeholder {
+    color: grey;
+}
+.addBtn {
+  background-color: #7B61FF;
+  color: white;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 15px;
+  border-style: none;
+  cursor: pointer;
+  width: 25%;
+
+}
+
+.myBtn {
+  background-color: #F14985;
+  color: white;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 15px;
+  border-style: none;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.myModal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  background: rgba(0,0,0, 0.5);
+}
+
+.myModalContent {
+  padding: 25px;
+  background: #28333F;
+  border-radius: 16px;
+  min-width: 650px;
+}
+
+.myModal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.post {
+  width: 90%;
+  display: flex;
+  column-gap: 10px;
+  padding: 15px;
+  margin: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(90deg, #28333F, #28333F),
+      linear-gradient(90deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+  background-clip: padding-box, border-box;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  
+
+}
+
+.post-content {
+  color: white;
+  font-size: 16px;
+}
+
+.post-content-header {
+  font-size: 20px;
+}
+.post-btn {
+  display: flex;
+  column-gap: 7px;
+}

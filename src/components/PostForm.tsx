@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import { IPosts } from '../interfaces/interfaces';
+import '../App.css';
 
 interface IPostForm {
     posts: IPosts[],
@@ -20,18 +21,20 @@ const PostForm: FC<IPostForm> = ({posts, setPosts}) => {
         setPost({title:"", body:""})
       }
   return (
-    <form onSubmit={addNewPost}>
+    <form onSubmit={addNewPost} className="createPost">
     <input
       type="text"
       value={post.title}
       onChange={(e) => setPost({...post, title: e.target.value})}
+      className="myInput"
     />
     <input
       type="text"
       value={post.body}
       onChange={(e) => setPost({...post, body: e.target.value})}
+      className="myInput"
     />
-    <button>Add</button>
+    <button className='addBtn'>Add</button>
   </form>
   );
 };
