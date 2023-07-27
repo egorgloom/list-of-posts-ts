@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
-import { IPost} from '../interfaces/interfaces';
+import { IPosts} from '../interfaces/interfaces';
 
 interface IPostItem {
-  post: IPost
+  post: IPosts
 }
 
 const PostItem: FC<IPostItem> = ({post}) => {

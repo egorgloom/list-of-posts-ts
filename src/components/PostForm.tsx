@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import { IPost, IPosts } from '../interfaces/interfaces';
+import { IPosts } from '../interfaces/interfaces';
 
 interface IPostForm {
     posts: IPosts[],
@@ -7,7 +7,7 @@ interface IPostForm {
 }
 
 const PostForm: FC<IPostForm> = ({posts, setPosts}) => {
-    const [post, setPost] = useState<Partial<IPost>>({title:'', body: ''});
+    const [post, setPost] = useState<Partial<IPosts>>({title:'', body: ''});
 
     const addNewPost = (event: React.FormEvent): void => {
         event.preventDefault();
@@ -16,7 +16,6 @@ const PostForm: FC<IPostForm> = ({posts, setPosts}) => {
           title: post.title,
           body: post.body
         }
-    
         setPosts([...posts, newPost]);
         setPost({title:"", body:""})
       }
