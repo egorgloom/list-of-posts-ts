@@ -1,11 +1,11 @@
 export interface IPosts {
-    id?: ()=> void,
+    id: number,
     title?: string,
     body?: string,
 }
 
 export interface IPost {
-    id?: string | number,
-    title: string,
+    id: number,
+    title?: string,
     body?: string,
 }
