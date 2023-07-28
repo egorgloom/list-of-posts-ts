@@ -7,5 +7,5 @@ type TPosts = {
 }
   export async function getPosts() {
     const response = await axios.get<TPosts>('https://jsonplaceholder.typicode.com/posts');
-    return response
+    return response.data
 }

@@ -152,3 +152,7 @@ body {
   display: flex;
   column-gap: 7px;
 }
+.not-found {
+  margin-top: 50px;
+  font-size: 36px;
+}

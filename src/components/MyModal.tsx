@@ -23,30 +23,3 @@ const MyModal: FC<IMyModal> = ({children, visible, setVisible}) => {
 };
 
 export default MyModal;
-
-// import React, { FC } from 'react';
-
-// interface IMyModal {
-//     children?: React.ReactNode,
-//     visible: boolean,
-//     setVisible: React.Dispatch<React.SetStateAction<boolean>>
-// }
-
-// const MyModal: FC<IMyModal> = ({children, visible, setVisible}) => {
-//     const rootClasses = ['myModal'];
-
-//     if(visible) {
-//         rootClasses.push('active')
-//     }
-
-//   return (
-//     <div className={rootClasses.join(' ')} onClick={()=> setVisible(false)}>
-//         <div className='myModalContent' onClick={(e)=>e.stopPropagation()}>
-//             {children}
-//         </div>
-
-//     </div>
-//   );
-// };
-
-// export default MyModal;

@@ -1,17 +1,19 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { getPosts } from './API/apiPosts';
 import './App.css';
 import MyModal from './components/MyModal';
 import PostForm from './components/PostForm';
-import PostItem from './components/PostItem';
+import PostList from './components/PostList';
 import SearchPost from './components/SearchPost';
 import { usePosts } from './hooks/usePosts';
 import { IPosts } from './interfaces/interfaces';
 
 
 
+
 function App() {
   const [posts, setPosts] = useState<IPosts[]>([
-    { id: 1, title: 'Egor', body: "Fisherman rsjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj" },
+    { id: 1, title: 'Egor', body: "Fisherman" },
     { id: 2, title: 'Sasha', body: "Fisherman" },
     { id: 3, title: 'Main', body: "team" },
   ])
@@ -19,6 +21,12 @@ function App() {
   const [search, setSearch] = useState<string>('');
   const [visible, setVisible] = useState<boolean>(false)
   const searchPosts = usePosts(posts, search);
+
+  // useEffect(()=>{
+
+  // },[])
+
+
 
   return (
     <div className="App">
@@ -30,7 +38,7 @@ function App() {
       >
       <PostForm posts={posts} setPosts={setPosts} />
       </MyModal>
-      {searchPosts.map((post: IPosts) => <PostItem post={post} key={post.id} />)}
+     <PostList posts={posts} setPosts={setPosts} searchPosts={searchPosts}/>
     </div>
   );
 }
